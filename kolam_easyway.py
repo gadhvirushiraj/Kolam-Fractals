@@ -25,17 +25,17 @@ def construct(struct):
         
 def draw(final):
     kolam = turtle.Turtle()
-    kolam.speed(100)
+    kolam.speed(100000)
     for i,x in enumerate(final):
         if x == "F" or x == "G":
-            kolam.forward(5)
+            kolam.forward(3)
         elif x == "+":
             kolam.left(theta)
         elif x == "-":
             kolam.right(theta)
     turtle.done()
 
-for _ in range(6):
+for _ in range(7):
     struct = construct(struct)
 
 print(struct)

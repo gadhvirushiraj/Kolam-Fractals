@@ -103,14 +103,9 @@ def draw_odd(l, dir, p_origin, end, color):
 
 def driver(parent, iter, iter_done = 1):
 
-    if iter_done == iter - 1:
-        color = 'r'
-    else:
-        color = 'black'
-
-    # color = 'black' 
-    if iter_done < iter:
-        cords = parent.giveCenter()
+    color = 'black' 
+    cords = parent.giveCenter()
+    if iter_done < iter and cords[0] >= 0 and  cords[1] >= 0:
         dir = [1, -1, 2, -2]
         del dir[dir.index(-1 * parent.growth_dir)]
         if parent.is_even:
@@ -152,7 +147,7 @@ def driver(parent, iter, iter_done = 1):
 
         
 
-iter = 5
+iter = 6
 odds = list(range(1, 2**(iter -1), 2))[::2]
 oddsodds = list(range(7, 2**(iter - 1), 8))
 # oddsoddsodds = [int(10*i*(2+math.sqrt(2))) for i in range(0,2**(iter-1),8)]
