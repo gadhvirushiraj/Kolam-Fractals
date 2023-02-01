@@ -28,14 +28,15 @@ def draw(final):
     kolam.speed(100)
     for i,x in enumerate(final):
         if x == "F" or x == "G":
-            kolam.forward(10)
+            kolam.forward(5)
         elif x == "+":
             kolam.left(theta)
         elif x == "-":
             kolam.right(theta)
     turtle.done()
 
-for _ in range(5):
+for _ in range(6):
     struct = construct(struct)
 
+print(struct)
 draw(struct)
