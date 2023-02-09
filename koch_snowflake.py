@@ -1,11 +1,10 @@
 import turtle
-import collections
 
 axiom = ["F","-", "-", "F", "-", "-", "F"]
 replace_F = ["F","+","F","-","-","F","+","F"]
 theta = 60
 
-def conaxiom(axiom):
+def construct(axiom):
     final_axiom = []
     for i,x in enumerate(axiom):
         if x == "F":
@@ -28,7 +27,6 @@ def draw(final):
     turtle.done()
 
 for _ in range(3):
-    axiom = conaxiom(axiom)
+    axiom = construct(axiom)
 
-print(axiom)
 draw(axiom)
