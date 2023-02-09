@@ -147,11 +147,11 @@ def driver(parent, iter, iter_done = 1):
 
         
 
-iter = 6
+iter = 7
 odds = list(range(1, 2**(iter -1), 2))[::2]
 oddsodds = list(range(7, 2**(iter - 1), 8))
 # oddsoddsodds = [int(10*i*(2+math.sqrt(2))) for i in range(0,2**(iter-1),8)]
-oddsoddsodds = [0,int(10*((2**(iter-1))/2)*(2+math.sqrt(2)))]
+oddsoddsodds = [int(10*i*(2+math.sqrt(2))) for i in [0,8,16]]
 p = Node(-1, True, 10, (0,0), "black", is_root = True)
 driver(p, 2**(iter-1))
 plt.show()
